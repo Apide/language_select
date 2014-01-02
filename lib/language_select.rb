@@ -1,3 +1,6 @@
+# -*- coding: utf-8 -*-
+# Copyright (c) 2014 Apide ApS; all rights reserved
+
 # LanguageSelect
 #
 # Adds #language_select method to
@@ -7,7 +10,9 @@ require 'language_select/version'
 require 'language_select/languages'
 
 module ActionView
+
   module Helpers
+
     module FormOptionsHelper
       #
       # Return select and option tags for the given object and method,
@@ -67,6 +72,7 @@ module ActionView
     end
 
     module ToLanguageSelectTag
+
       def to_language_select_tag(priority_languages, options, html_options)
         html_options = html_options.stringify_keys
         add_default_name_and_id(html_options)
@@ -78,12 +84,13 @@ module ActionView
           ), html_options
         )
       end
+
     end
 
     if defined?(ActionView::Helpers::InstanceTag) &&
         ActionView::Helpers::InstanceTag.instance_method(:initialize).arity != 0
       class InstanceTag
-        include ToCountrySelectTag
+        include ToLanguageSelectTag
       end
     else
       class LanguageSelect < Tags::Base

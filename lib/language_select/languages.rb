@@ -1,4 +1,5 @@
-# encoding: utf-8
+# -*- coding: utf-8 -*-
+# Copyright (c) 2014 Apide ApS; all rights reserved
 
 module LanguageSelect
 
@@ -55,6 +56,6 @@ module LanguageSelect
     "zu" => "Zulu"
   } unless const_defined?("LANGUAGES")
 
-  LANGUAGES_FOR_SELECT = LANGUAGES.invert unless const_defined?("LANGUAGES_FOR_SELECT")
+  LANGUAGES_FOR_SELECT = LANGUAGES.invert.sort unless const_defined?("LANGUAGES_FOR_SELECT")
 
 end
