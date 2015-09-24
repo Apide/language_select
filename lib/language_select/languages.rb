@@ -26,7 +26,7 @@ module LanguageSelect
     "id" => "Indonesian",
     "is" => "Icelandic",
     "it" => "Italian",
-    "ja" => "Janapese",
+    "ja" => "Japanese",
     "ko" => "Korean",
     "ku" => "Kurdish",
     "lo" => "Lao",
